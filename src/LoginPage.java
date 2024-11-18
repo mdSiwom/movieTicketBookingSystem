@@ -32,6 +32,7 @@ public class LoginPage implements ActionListener {
         customers = customers1;
 
         userIDLabel.setBounds(250, 300, 75, 25);
+        
         userIDField.setBounds(325, 300, 200, 25);
 
         userPasswordLabel.setBounds(250, 350, 75, 25);
@@ -75,9 +76,9 @@ public class LoginPage implements ActionListener {
             for (User user : logininfo) {
                 if (user.getUsername().equals(userID)) { // equal er method return niye jhamela ase; strings diye direct compare korle comments thik bhabe kaaj kore but user pass kore hche na; only login ta hoche
                     if (user.getPassword().equals(password)) {
-                        messageLabel.setForeground(Color.green);
+                        //messageLabel.setForeground(Color.green);
                         messageLabel.setText("Login successful"); // ken jani dekhache na - 13.11.23 12.24 pm
-                        frame.dispose();
+                        //frame.dispose();
                         Homepage welcomePage = new Homepage(userID, shows, theatres, bookings, customers);
                     } else {
                         messageLabel.setForeground(Color.red);
